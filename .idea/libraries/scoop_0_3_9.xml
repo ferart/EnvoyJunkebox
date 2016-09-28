@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="scoop-0.3.9">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.lyft/scoop/0.3.9/458219f2583cc2a678859e7a0ce1ee368612f65f/scoop-0.3.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.lyft/scoop/0.3.9/baf4930529f307e4ecc8e9666b139452d5c4d17f/scoop-0.3.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
