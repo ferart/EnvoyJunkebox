@@ -54,8 +54,4 @@ public class MainScreenPresenterImpl implements MainScreenPresenter {
 
     }
 
-    @Override
-    public void sendCredentials() {
-
-    }
 }

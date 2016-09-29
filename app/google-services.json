@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "63940435989",
+    "firebase_url": "https://collaborativejunkebox.firebaseio.com",
+    "project_id": "collaborativejunkebox",
+    "storage_bucket": "collaborativejunkebox.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63940435989:android:33900ccf0c253a56",
+        "android_client_info": {
+          "package_name": "com.ferart.collaborativejunkebox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63940435989-3h9v9c3m55i4pnshfja2dc0t166ihost.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ferart.collaborativejunkebox",
+            "certificate_hash": "9F04A481A50B93EB509EFF85CD356285B89902D2"
+          }
+        },
+        {
+          "client_id": "63940435989-dnqr4jv6dnvb2rj531g9e2ttr7r9rt7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDY1FmT8291lhviGovbGn1mx321xwvFEd8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63940435989-dnqr4jv6dnvb2rj531g9e2ttr7r9rt7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

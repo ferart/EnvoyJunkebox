@@ -5,6 +5,5 @@ package com.ferart.collaborativejunkebox.scoop.controllers.splash;
  */
 
 public interface SplashActionsController {
-    void startSplash();
     void endSplash();
 }

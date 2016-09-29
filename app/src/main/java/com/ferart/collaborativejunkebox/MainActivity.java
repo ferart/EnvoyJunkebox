@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         ((ApplicationManager)getApplicationContext()).getPresentationComponent().inject(this);
         //adding first scoop as root, required by framework
         rootScoop = new Scoop.Builder("root").build();
-        rootScoop.inflate(R.layout.splash_screen_junkebox, (ViewGroup) findViewById(R.id.main), true);
+        rootScoop.inflate(R.layout.root_main_containers, (ViewGroup) findViewById(R.id.main), true);
     }
 
     @Override

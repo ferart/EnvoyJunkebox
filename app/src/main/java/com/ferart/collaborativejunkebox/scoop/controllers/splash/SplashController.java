@@ -5,10 +5,14 @@ import com.ferart.collaborativejunkebox.R;
 import com.ferart.collaborativejunkebox.presenters.splashscreen.SplashPresenter;
 import com.lyft.scoop.ViewController;
 
+import javax.inject.Inject;
+
 /**
  * Created by root on 9/24/16.
  */
 public class SplashController extends ViewController implements SplashActionsController {
+
+    @Inject
     SplashPresenter splashPresenter;
 
     @Override
@@ -29,7 +33,7 @@ public class SplashController extends ViewController implements SplashActionsCon
         super.onDetach();
     }
 
-    @Override
+
     public void startSplash() {
         splashPresenter.startAnimation();
         splashPresenter.startCommFirebase();

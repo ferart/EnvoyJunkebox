@@ -1,6 +1,7 @@
 package com.ferart.collaborativejunkebox.scoop.routers;
 
 import com.ferart.collaborativejunkebox.scoop.routers.common.BaseRouter;
+import com.lyft.scoop.Screen;
 import com.lyft.scoop.ScreenScooper;
 
 /**
@@ -10,5 +11,10 @@ public class MainRouter extends BaseRouter{
 
     MainRouter(ScreenScooper screenScooper) {
         super(screenScooper);
+    }
+
+    @Override
+    public void goTo(Screen screen) {
+        super.goTo(screen);
     }
 }

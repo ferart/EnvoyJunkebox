@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 'Google Inc.:Google APIs:24'
@@ -30,6 +31,7 @@ android {
             renderscriptDebuggable true
         }
         release {
+            debuggable true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -44,5 +46,7 @@ dependencies {
     compile 'com.lyft:scoop:0.3.9'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.google.dagger:dagger:2.1'
+    compile 'com.google.firebase:firebase-auth:9.0.0'
+    compile 'com.google.firebase:firebase-messaging:9.0.0'
     apt 'com.google.dagger:dagger-compiler:2.1'
 }

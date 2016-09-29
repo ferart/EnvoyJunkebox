@@ -1,5 +1,6 @@
 package com.ferart.collaborativejunkebox.domain;
 
+import com.ferart.collaborativejunkebox.domain.splash.SplashInteractor;
 import com.ferart.collaborativejunkebox.domain.thread.Executor;
 import com.ferart.collaborativejunkebox.domain.thread.MainThread;
 import com.ferart.collaborativejunkebox.domain.thread.MainThreadImpl;
@@ -17,12 +18,18 @@ import dagger.Provides;
 public class DomainModule {
     @Provides
     @Singleton
-    public Executor provideExecutor() {
+    public Executor providesExecutor() {
         return new ThreadExecutor();
     }
 
-    @Provides @Singleton
-    MainThread provideMainThread() {
+    @Provides
+    @Singleton
+    MainThread providesMainThread() {
         return new MainThreadImpl();
+    }
+
+    @Provides
+    SplashInteractor providesSplashInteractor(Executor executor, MainThread mainThread){
+        return new SplashInteractor(executor,mainThread);
     }
 }

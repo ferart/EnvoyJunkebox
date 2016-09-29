@@ -1,7 +1,9 @@
 package com.ferart.collaborativejunkebox.scoop;
 
 import com.ferart.collaborativejunkebox.MainActivity;
+import com.ferart.collaborativejunkebox.domain.DomainModule;
 import com.ferart.collaborativejunkebox.presenters.PresentersModule;
+import com.ferart.collaborativejunkebox.presenters.splashscreen.SplashPresenter;
 import com.ferart.collaborativejunkebox.scoop.containers.MainContainer;
 import com.ferart.collaborativejunkebox.scoop.controllers.splash.SplashController;
 import com.ferart.collaborativejunkebox.scoop.routers.RouterModule;
@@ -14,7 +16,7 @@ import dagger.Component;
  * Created by root on 9/24/16.
  */
 @Singleton
-@Component(modules={RouterModule.class, PresentersModule.class})
+@Component(modules={RouterModule.class, PresentersModule.class, DomainModule.class})
 public interface PresentationComponent {
     /*Scoop injections
      */
@@ -25,4 +27,5 @@ public interface PresentationComponent {
      * MVP injections
      */
     void inject(SplashController splashController);
+    void inject(SplashPresenter splashPresenter);
 }

@@ -1,14 +1,27 @@
 package com.ferart.collaborativejunkebox.presenters.splashscreen;
 
+import com.ferart.collaborativejunkebox.domain.splash.SplashInteractor;
 import com.ferart.collaborativejunkebox.scoop.controllers.splash.SplashActionsController;
-import com.ferart.collaborativejunkebox.scoop.controllers.splash.SplashController;
 import com.lyft.scoop.ViewController;
+
+import javax.inject.Inject;
 
 /**
  * Created by root on 9/25/16.
  */
 
 public class SplashPresenterImpl implements SplashPresenter {
+
+    private SplashInteractor splashInteractor;
+
+    @Inject
+    public SplashPresenterImpl(SplashInteractor splashInteractor) {
+        this.splashInteractor = splashInteractor;
+    }
+
+    /**
+     * View to communicate with
+     */
     private SplashActionsController viewController;
 
     @Override
@@ -46,8 +59,12 @@ public class SplashPresenterImpl implements SplashPresenter {
 
     }
 
+    /**
+     * Authenticate anonymously on firebase
+     */
     @Override
     public void startCommFirebase() {
 
+        splashInteractor.execute();
     }
 }
