@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'me.tatarka.retrolambda'
-apply plugin: 'com.google.gms.google-services'
+
 
 android {
     compileSdkVersion 'Google Inc.:Google APIs:24'
@@ -48,5 +48,7 @@ dependencies {
     compile 'com.google.dagger:dagger:2.1'
     compile 'com.google.firebase:firebase-auth:9.0.0'
     compile 'com.google.firebase:firebase-messaging:9.0.0'
+    compile 'com.google.android.gms:play-services-maps:9.6.1'
+    compile 'com.google.android.gms:play-services-location:9.6.1'
     apt 'com.google.dagger:dagger-compiler:2.1'
 }

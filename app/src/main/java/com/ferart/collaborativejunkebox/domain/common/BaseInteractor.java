@@ -10,7 +10,7 @@ import javax.inject.Inject;
  */
 
 public abstract  class BaseInteractor implements Interactor {
-    private final Executor executor;
+    protected final Executor executor;
     private final MainThread mainThread;
 
 

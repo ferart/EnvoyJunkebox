@@ -57,11 +57,17 @@ public class ThreadExecutor implements Executor {
         new ThreadPoolExecutor(corePoolSize, maxPoolSize, keepAliveTime, timeUnit, workQueue);
   }
 
+
+
   @Override
   public void run(final Interactor interactor) {
     if (interactor == null) {
       throw new IllegalArgumentException("Interactor to execute can't be null");
     }
     threadPoolExecutor.submit(()->interactor.run());
+  }
+
+  public ThreadPoolExecutor getThreadPoolExecutor() {
+    return threadPoolExecutor;
   }
 }

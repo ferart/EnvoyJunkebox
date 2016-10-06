@@ -13,16 +13,17 @@ import javax.inject.Inject;
 public class SplashPresenterImpl implements SplashPresenter {
 
     private SplashInteractor splashInteractor;
+    /**
+     * View to communicate with
+     */
+    private SplashActionsController viewController;
 
     @Inject
     public SplashPresenterImpl(SplashInteractor splashInteractor) {
         this.splashInteractor = splashInteractor;
     }
 
-    /**
-     * View to communicate with
-     */
-    private SplashActionsController viewController;
+
 
     @Override
     public void onAttached(ViewController viewController) {

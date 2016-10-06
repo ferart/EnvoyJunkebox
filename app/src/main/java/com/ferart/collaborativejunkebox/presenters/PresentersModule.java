@@ -1,5 +1,6 @@
 package com.ferart.collaborativejunkebox.presenters;
 
+import com.ferart.collaborativejunkebox.domain.sesion.SessionInteractor;
 import com.ferart.collaborativejunkebox.domain.splash.SplashInteractor;
 import com.ferart.collaborativejunkebox.presenters.mainscreen.MainScreenPresenterImpl;
 import com.ferart.collaborativejunkebox.presenters.mainscreen.MainScreenPresenter;
@@ -21,8 +22,8 @@ public class PresentersModule {
 
     @Provides
     @Singleton
-    public MainScreenPresenter providesFirebasePresenter(@Named("mainRouter") IRouter mainRouter){
-        return new MainScreenPresenterImpl(mainRouter);
+    public MainScreenPresenter providesMainScreenPresenter(@Named("mainRouter") IRouter mainRouter, SessionInteractor sessionInteractor){
+        return new MainScreenPresenterImpl(mainRouter,sessionInteractor);
     }
 
     @Provides

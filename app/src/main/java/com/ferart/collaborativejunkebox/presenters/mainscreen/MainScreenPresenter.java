@@ -7,5 +7,5 @@ import com.ferart.collaborativejunkebox.presenters.common.BasePresenter;
  */
 
 public interface MainScreenPresenter extends BasePresenter {
-
+    void authFailure();
 }

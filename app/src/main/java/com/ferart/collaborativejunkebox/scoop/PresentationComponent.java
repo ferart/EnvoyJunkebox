@@ -3,6 +3,7 @@ package com.ferart.collaborativejunkebox.scoop;
 import com.ferart.collaborativejunkebox.MainActivity;
 import com.ferart.collaborativejunkebox.domain.DomainModule;
 import com.ferart.collaborativejunkebox.presenters.PresentersModule;
+import com.ferart.collaborativejunkebox.presenters.mainscreen.MainScreenPresenter;
 import com.ferart.collaborativejunkebox.presenters.splashscreen.SplashPresenter;
 import com.ferart.collaborativejunkebox.scoop.containers.MainContainer;
 import com.ferart.collaborativejunkebox.scoop.controllers.splash.SplashController;
@@ -28,4 +29,5 @@ public interface PresentationComponent {
      */
     void inject(SplashController splashController);
     void inject(SplashPresenter splashPresenter);
+    void inject(MainScreenPresenter mainScreenPresenter);
 }

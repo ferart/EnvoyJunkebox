@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         rootScoop.destroy(); // Good practice
+        mainScreenPresenter.onDestroy();
     }
 
     @Override

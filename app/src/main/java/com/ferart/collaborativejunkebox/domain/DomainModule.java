@@ -1,5 +1,7 @@
 package com.ferart.collaborativejunkebox.domain;
 
+import com.ferart.collaborativejunkebox.domain.sesion.SessionInteractor;
+import com.ferart.collaborativejunkebox.domain.sesion.SessionInteractorImpl;
 import com.ferart.collaborativejunkebox.domain.splash.SplashInteractor;
 import com.ferart.collaborativejunkebox.domain.thread.Executor;
 import com.ferart.collaborativejunkebox.domain.thread.MainThread;
@@ -31,5 +33,9 @@ public class DomainModule {
     @Provides
     SplashInteractor providesSplashInteractor(Executor executor, MainThread mainThread){
         return new SplashInteractor(executor,mainThread);
+    }
+    @Provides
+    SessionInteractor providesSessionInteractor(Executor executor, MainThread mainThread){
+        return new SessionInteractorImpl(executor,mainThread);
     }
 }
