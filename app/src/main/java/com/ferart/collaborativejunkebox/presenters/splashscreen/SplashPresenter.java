@@ -8,5 +8,4 @@ import com.ferart.collaborativejunkebox.presenters.common.BasePresenter;
 
 public  interface SplashPresenter extends BasePresenter {
     void startAnimation();
-    void startCommFirebase();
 }

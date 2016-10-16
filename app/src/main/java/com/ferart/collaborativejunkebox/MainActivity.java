@@ -1,10 +1,14 @@
 package com.ferart.collaborativejunkebox;
 
+import android.app.Dialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
 import com.ferart.collaborativejunkebox.presenters.mainscreen.MainScreenPresenter;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.lyft.scoop.Scoop;
 
 import javax.inject.Inject;
@@ -29,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        mainScreenPresenter.onResume();
+        if (isPlayServicesAvailable()){
+            mainScreenPresenter.onResume();
+        }
     }
 
     @Override
@@ -57,5 +63,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+    }
+
+    private boolean isPlayServicesAvailable(){
+        GoogleApiAvailability googleApiAvailability=GoogleApiAvailability.getInstance();
+        // Getting status
+        int status = googleApiAvailability.isGooglePlayServicesAvailable(getBaseContext());
+
+        // Showing status
+        if(status== ConnectionResult.SUCCESS)
+            return true;
+        else{
+            int requestCode = 10;
+            Dialog dialog = googleApiAvailability.getErrorDialog(MainActivity.this,status, requestCode);
+            dialog.show();
+            return false;
+        }
     }
 }

@@ -3,8 +3,8 @@ package com.ferart.collaborativejunkebox;
 import android.app.Application;
 
 import com.ferart.collaborativejunkebox.diutils.ButterKnifeViewBinder;
-import com.ferart.collaborativejunkebox.scoop.DaggerPresentationComponent;
-import com.ferart.collaborativejunkebox.scoop.PresentationComponent;
+import com.ferart.collaborativejunkebox.scoop.ApplicationModule;
+//import com.ferart.collaborativejunkebox.scoop.DaggerPresentationComponent;
 import com.lyft.scoop.Scoop;
 
 /**
@@ -18,7 +18,7 @@ public class ApplicationManager extends Application {
     public void onCreate() {
         super.onCreate();
         Scoop.setViewBinder(new ButterKnifeViewBinder());
-        presentationComponent= DaggerPresentationComponent.builder().build();
+        presentationComponent= DaggerPresentationComponent.builder().applicationModule(new ApplicationModule(this)).build();
     }
 
     public PresentationComponent getPresentationComponent() {

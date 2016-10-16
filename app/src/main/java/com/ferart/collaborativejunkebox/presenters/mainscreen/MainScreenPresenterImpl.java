@@ -1,6 +1,6 @@
 package com.ferart.collaborativejunkebox.presenters.mainscreen;
 
-import android.view.View;
+import android.app.Dialog;
 
 import com.ferart.collaborativejunkebox.domain.sesion.SessionInteractor;
 import com.ferart.collaborativejunkebox.scoop.routers.common.IRouter;
@@ -26,8 +26,9 @@ public class MainScreenPresenterImpl implements MainScreenPresenter {
     public MainScreenPresenterImpl(IRouter mainRouter, SessionInteractor sessionInteractor) {
         this.mainRouter=mainRouter;
         this.sessionInteractor=sessionInteractor;
+        sessionInteractor.injectMainPresenter(this);
         sessionInteractor.addAuthStateListener();
-        sessionInteractor.siginAnonymously();
+        sessionInteractor.signinAnonymously();
     }
 
 
@@ -68,4 +69,6 @@ public class MainScreenPresenterImpl implements MainScreenPresenter {
     public void authFailure() {
         //handle auth failure
     }
+
+
 }

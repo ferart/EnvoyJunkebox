@@ -15,6 +15,7 @@ public class SplashController extends ViewController implements SplashActionsCon
     @Inject
     SplashPresenter splashPresenter;
 
+
     @Override
     protected int layoutId() {
         return R.layout.splash_screen_junkebox;
@@ -36,7 +37,6 @@ public class SplashController extends ViewController implements SplashActionsCon
 
     public void startSplash() {
         splashPresenter.startAnimation();
-        splashPresenter.startCommFirebase();
     }
 
     @Override

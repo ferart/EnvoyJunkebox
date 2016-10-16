@@ -12,7 +12,7 @@ import com.ferart.collaborativejunkebox.domain.thread.MainThread;
 
 public class SplashInteractor extends BaseInteractor {
 
-    private static final String TAG="SplashInteractorImpl";
+    private static final String TAG=SplashInteractor.class.getName();
 
     public SplashInteractor(Executor executor, MainThread mainThread) {
         super(executor, mainThread);

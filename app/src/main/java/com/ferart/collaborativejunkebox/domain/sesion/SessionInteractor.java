@@ -10,6 +10,6 @@ import com.ferart.collaborativejunkebox.presenters.mainscreen.MainScreenPresente
 public interface SessionInteractor {
     void addAuthStateListener();
     void removeAuthStateListener();
-    void siginAnonymously();
+    void signinAnonymously();
     void injectMainPresenter(MainScreenPresenter mainScreenPresenter);
 }

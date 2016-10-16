@@ -1,5 +1,7 @@
 package com.ferart.collaborativejunkebox.domain;
 
+import com.ferart.collaborativejunkebox.data.fcm.FCMMessageDAO;
+import com.ferart.collaborativejunkebox.domain.fcmtoken.FCMMessageInteractor;
 import com.ferart.collaborativejunkebox.domain.sesion.SessionInteractor;
 import com.ferart.collaborativejunkebox.domain.sesion.SessionInteractorImpl;
 import com.ferart.collaborativejunkebox.domain.splash.SplashInteractor;
@@ -37,5 +39,10 @@ public class DomainModule {
     @Provides
     SessionInteractor providesSessionInteractor(Executor executor, MainThread mainThread){
         return new SessionInteractorImpl(executor,mainThread);
+    }
+
+    @Provides
+    FCMMessageInteractor providesFcmMessageInteractor(Executor executor, MainThread mainThread, FCMMessageDAO fcmMessageDAO){
+        return new FCMMessageInteractor(executor,mainThread,fcmMessageDAO);
     }
 }

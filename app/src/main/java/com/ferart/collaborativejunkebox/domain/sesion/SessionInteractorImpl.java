@@ -7,7 +7,6 @@ import android.widget.Toast;
 import com.ferart.collaborativejunkebox.domain.common.BaseInteractor;
 import com.ferart.collaborativejunkebox.domain.thread.Executor;
 import com.ferart.collaborativejunkebox.domain.thread.MainThread;
-import com.ferart.collaborativejunkebox.domain.thread.MainThreadImpl;
 import com.ferart.collaborativejunkebox.domain.thread.ThreadExecutor;
 import com.ferart.collaborativejunkebox.presenters.mainscreen.MainScreenPresenter;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -52,7 +51,7 @@ public class SessionInteractorImpl extends BaseInteractor implements SessionInte
     }
 
     @Override
-    public void siginAnonymously() {
+    public void signinAnonymously() {
         //Task task = RemoteConfig.getInstance().fetch();
         mAuth.signInAnonymously().addOnCompleteListener(((ThreadExecutor)executor).getThreadPoolExecutor(), new OnCompleteListener<AuthResult>() {
                     @Override
