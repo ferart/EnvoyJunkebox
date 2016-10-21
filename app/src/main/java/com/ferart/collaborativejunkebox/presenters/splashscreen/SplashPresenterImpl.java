@@ -39,7 +39,7 @@ public class SplashPresenterImpl implements SplashPresenter {
 
         //todo: remove this from here
         fcmMessageInteractor.setTokenID("cfzyVYjMot4:APA91bHunoDwwB8fHeKJbDJTEJSBzBK1jX8LJEHTFfTP4yGs6L_gCnJIvwNFtDh2bGv_SwERqwhtJrjIWXAasWqviGDwGWnSp4YLGK6O6q1CphmpGL7jRPdRdDwfNsy9sHOixCyqoLTD");
-        fcmMessageInteractor.setMessage("Message sent by the app");
+        fcmMessageInteractor.setMessage("Message sent by the app, fuck yeah!");
         fcmMessageInteractor.execute();
     }
 
