@@ -24,7 +24,7 @@ public class DataModule {
     @Provides
     @Named("appServerURL")
     String providesAppServerURL(){
-        return "http://192.168.1.69:8080/suggestion";
+        return "http://appserver-junkebox-junkeboxappserver.44fs.preview.openshiftapps.com/suggestion";
     }
 
     @Provides

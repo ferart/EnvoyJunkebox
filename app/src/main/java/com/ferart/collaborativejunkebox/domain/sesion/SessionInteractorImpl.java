@@ -78,7 +78,7 @@ public class SessionInteractorImpl extends BaseInteractor implements SessionInte
         public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
             FirebaseUser user = firebaseAuth.getCurrentUser();
             if (user != null) {
-                // User is signed in
+                // User is signed in, I'm a Jukebox
                 Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
             } else {
                 // User is signed out

@@ -1,0 +1,3 @@
+curl -H "Content-Type: application/json" -X POST -d "{"""token""":"""cfzyVYjMot4:APA91bHunoDwwB8fHeKJbDJTEJSBzBK1jX8LJEHTFfTP4yGs6L_gCnJIvwNFtDh2bGv_SwERqwhtJrjIWXAasWqviGDwGWnSp4YLGK6O6q1CphmpGL7jRPdRdDwfNsy9sHOixCyqoLTD""","""message""":"""soy el puto amo"""}"  http://appserver-junkebox-junkeboxappserver.44fs.preview.openshiftapps.com
+
+curl -H "Content-Type: application/json" -X POST -d "{"""token""":"""cfzyVYjMot4:APA91bHunoDwwB8fHeKJbDJTEJSBzBK1jX8LJEHTFfTP4yGs6L_gCnJIvwNFtDh2bGv_SwERqwhtJrjIWXAasWqviGDwGWnSp4YLGK6O6q1CphmpGL7jRPdRdDwfNsy9sHOixCyqoLTD""","""message""":"""soy el puto amo"""}"  http://192.168.1.69:8080
