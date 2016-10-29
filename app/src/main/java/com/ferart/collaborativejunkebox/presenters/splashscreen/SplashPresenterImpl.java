@@ -14,16 +14,15 @@ import javax.inject.Inject;
 public class SplashPresenterImpl implements SplashPresenter {
 
     private SplashInteractor splashInteractor;
-    private FCMMessageInteractor fcmMessageInteractor;
+
     /**
      * View to communicate with
      */
     private SplashActionsController viewController;
 
     @Inject
-    public SplashPresenterImpl(SplashInteractor splashInteractor, FCMMessageInteractor fcmMessageInteractor) {
+    public SplashPresenterImpl(SplashInteractor splashInteractor) {
         this.splashInteractor = splashInteractor;
-        this.fcmMessageInteractor=fcmMessageInteractor;
     }
 
 
@@ -38,9 +37,9 @@ public class SplashPresenterImpl implements SplashPresenter {
         splashInteractor.execute();
 
         //todo: remove this from here
-        fcmMessageInteractor.setTokenID("cfzyVYjMot4:APA91bHunoDwwB8fHeKJbDJTEJSBzBK1jX8LJEHTFfTP4yGs6L_gCnJIvwNFtDh2bGv_SwERqwhtJrjIWXAasWqviGDwGWnSp4YLGK6O6q1CphmpGL7jRPdRdDwfNsy9sHOixCyqoLTD");
-        fcmMessageInteractor.setMessage("Message sent by the app, fuck yeah!");
-        fcmMessageInteractor.execute();
+//        fcmMessageInteractor.setTokenID("cfzyVYjMot4:APA91bHunoDwwB8fHeKJbDJTEJSBzBK1jX8LJEHTFfTP4yGs6L_gCnJIvwNFtDh2bGv_SwERqwhtJrjIWXAasWqviGDwGWnSp4YLGK6O6q1CphmpGL7jRPdRdDwfNsy9sHOixCyqoLTD");
+//        fcmMessageInteractor.setMessage("Message sent by the app, fuck yeah!");
+//        fcmMessageInteractor.execute();
     }
 
     @Override

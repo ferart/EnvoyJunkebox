@@ -2,8 +2,7 @@ package com.ferart.collaborativejunkebox.domain.fcmtoken;
 
 import android.text.TextUtils;
 
-import com.ferart.collaborativejunkebox.data.fcm.FCMMessageDAO;
-import com.ferart.collaborativejunkebox.data.preferences.AccessPreferencesDAO;
+import com.ferart.collaborativejunkebox.data.fcm.messaging.FCMMessageDAO;
 import com.ferart.collaborativejunkebox.domain.common.BaseInteractor;
 import com.ferart.collaborativejunkebox.domain.thread.Executor;
 import com.ferart.collaborativejunkebox.domain.thread.MainThread;
@@ -14,7 +13,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 
 import javax.inject.Inject;
-import javax.inject.Named;
 
 import okhttp3.Response;
 

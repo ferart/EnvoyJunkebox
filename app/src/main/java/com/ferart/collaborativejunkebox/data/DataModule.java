@@ -1,7 +1,9 @@
 package com.ferart.collaborativejunkebox.data;
 
-import com.ferart.collaborativejunkebox.data.fcm.FCMMessageDAO;
-import com.ferart.collaborativejunkebox.data.fcm.FCMMessageDAOImpl;
+import com.google.firebase.database.DatabaseReference;
+
+import com.ferart.collaborativejunkebox.data.fcm.messaging.FCMMessageDAO;
+import com.ferart.collaborativejunkebox.data.fcm.messaging.FCMMessageDAOImpl;
 import com.ferart.collaborativejunkebox.data.preferences.AccessPreferencesDAO;
 import com.ferart.collaborativejunkebox.data.preferences.AccessPreferencesDAOImpl;
 
@@ -43,6 +45,7 @@ public class DataModule {
         return new OkHttpClient();
     }
 
+
     @Provides
     @Singleton
     AccessPreferencesDAO providesAccessPreferences(){
@@ -54,6 +57,8 @@ public class DataModule {
     FCMMessageDAO providesFcmMessageDAO(OkHttpClient okHttpClient, @Named("appServerURL") String appServerURL,@Named("JSONMediaType") MediaType jsonMediaType){
         return new FCMMessageDAOImpl(okHttpClient,appServerURL,jsonMediaType);
     }
+
+
 
 
 

@@ -22,14 +22,14 @@
         </activity>
 
         <service
-            android:name=".data.fcm.MessagingHandlingService">
+            android:name=".data.fcm.messaging.MessagingHandlingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
 
         <service
-            android:name=".data.fcm.MessagingInstanceIDService">
+            android:name=".data.fcm.messaging.MessagingInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>

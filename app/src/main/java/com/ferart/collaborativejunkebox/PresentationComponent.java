@@ -1,9 +1,8 @@
 package com.ferart.collaborativejunkebox;
 
 import com.ferart.collaborativejunkebox.data.DataModule;
-import com.ferart.collaborativejunkebox.data.fcm.FCMMessageDAO;
-import com.ferart.collaborativejunkebox.data.fcm.FCMMessageDAOImpl;
-import com.ferart.collaborativejunkebox.data.fcm.MessagingInstanceIDService;
+import com.ferart.collaborativejunkebox.data.fcm.messaging.FCMMessageDAOImpl;
+import com.ferart.collaborativejunkebox.data.fcm.messaging.MessagingInstanceIDService;
 import com.ferart.collaborativejunkebox.data.preferences.AccessPreferencesDAO;
 import com.ferart.collaborativejunkebox.domain.DomainModule;
 import com.ferart.collaborativejunkebox.domain.fcmtoken.FCMMessageInteractor;

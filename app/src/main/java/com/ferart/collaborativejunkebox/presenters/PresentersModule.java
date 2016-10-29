@@ -29,7 +29,7 @@ public class PresentersModule {
 
     @Provides
     @Singleton
-    public SplashPresenter providesSplashPresenter(SplashInteractor splashInteractor, FCMMessageInteractor fcmMessageInteractor){
-        return new SplashPresenterImpl(splashInteractor,fcmMessageInteractor);
+    public SplashPresenter providesSplashPresenter(SplashInteractor splashInteractor){
+        return new SplashPresenterImpl(splashInteractor);
     }
 }

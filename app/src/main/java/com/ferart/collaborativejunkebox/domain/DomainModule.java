@@ -1,6 +1,6 @@
 package com.ferart.collaborativejunkebox.domain;
 
-import com.ferart.collaborativejunkebox.data.fcm.FCMMessageDAO;
+import com.ferart.collaborativejunkebox.data.fcm.messaging.FCMMessageDAO;
 import com.ferart.collaborativejunkebox.domain.fcmtoken.FCMMessageInteractor;
 import com.ferart.collaborativejunkebox.domain.sesion.SessionInteractor;
 import com.ferart.collaborativejunkebox.domain.sesion.SessionInteractorImpl;

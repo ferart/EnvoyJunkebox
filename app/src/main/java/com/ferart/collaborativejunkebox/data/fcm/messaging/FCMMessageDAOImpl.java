@@ -1,15 +1,10 @@
-package com.ferart.collaborativejunkebox.data.fcm;
+package com.ferart.collaborativejunkebox.data.fcm.messaging;
 
 import android.util.Log;
-
-import com.ferart.collaborativejunkebox.data.SimpleCallback;
-
-import org.json.JSONException;
 
 import java.io.IOException;
 
 import javax.inject.Inject;
-import javax.inject.Named;
 
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;

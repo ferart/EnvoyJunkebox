@@ -1,4 +1,4 @@
-package com.ferart.collaborativejunkebox.data.fcm;
+package com.ferart.collaborativejunkebox.data.fcm.messaging;
 
 import android.util.Log;
 

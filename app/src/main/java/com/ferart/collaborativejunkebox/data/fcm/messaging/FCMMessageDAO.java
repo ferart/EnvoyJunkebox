@@ -1,4 +1,4 @@
-package com.ferart.collaborativejunkebox.data.fcm;
+package com.ferart.collaborativejunkebox.data.fcm.messaging;
 
 import com.ferart.collaborativejunkebox.data.SimpleCallback;
 
