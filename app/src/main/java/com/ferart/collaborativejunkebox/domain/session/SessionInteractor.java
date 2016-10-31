@@ -1,4 +1,4 @@
-package com.ferart.collaborativejunkebox.domain.sesion;
+package com.ferart.collaborativejunkebox.domain.session;
 
 import com.ferart.collaborativejunkebox.presenters.mainscreen.MainScreenPresenter;
 

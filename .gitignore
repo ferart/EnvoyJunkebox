@@ -57,3 +57,5 @@ Thumbs.db
 .idea/libraries/android_android_24.xml
 
 *.xml
+.idea/libraries/appcompat_v7_24_2_1.xml
+.idea/libraries/dagger_2_1.xml

@@ -11,10 +11,12 @@ import javax.inject.Inject;
 public class AccessPreferencesDAOImpl implements AccessPreferencesDAO {
 
 
-    @Inject
+
     SharedPreferences sharedPreferences;
 
-    public AccessPreferencesDAOImpl() {
+    @Inject
+    public AccessPreferencesDAOImpl(SharedPreferences sharedPreferences) {
+        this.sharedPreferences=sharedPreferences;
     }
 
     @Override

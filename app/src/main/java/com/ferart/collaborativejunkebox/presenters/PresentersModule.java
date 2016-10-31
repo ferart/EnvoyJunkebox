@@ -1,7 +1,8 @@
 package com.ferart.collaborativejunkebox.presenters;
 
-import com.ferart.collaborativejunkebox.domain.fcmtoken.FCMMessageInteractor;
-import com.ferart.collaborativejunkebox.domain.sesion.SessionInteractor;
+import com.ferart.collaborativejunkebox.domain.partymanager.CreatePartyInteractor;
+import com.ferart.collaborativejunkebox.domain.partymanager.PartyLocationTrackerInteractor;
+import com.ferart.collaborativejunkebox.domain.session.SessionInteractor;
 import com.ferart.collaborativejunkebox.domain.splash.SplashInteractor;
 import com.ferart.collaborativejunkebox.presenters.mainscreen.MainScreenPresenterImpl;
 import com.ferart.collaborativejunkebox.presenters.mainscreen.MainScreenPresenter;
@@ -29,7 +30,7 @@ public class PresentersModule {
 
     @Provides
     @Singleton
-    public SplashPresenter providesSplashPresenter(SplashInteractor splashInteractor){
-        return new SplashPresenterImpl(splashInteractor);
+    public SplashPresenter providesSplashPresenter(SplashInteractor splashInteractor, CreatePartyInteractor createPartyInteractor, PartyLocationTrackerInteractor partyLocationTrackerInteractor){
+        return new SplashPresenterImpl(splashInteractor, createPartyInteractor,partyLocationTrackerInteractor);
     }
 }

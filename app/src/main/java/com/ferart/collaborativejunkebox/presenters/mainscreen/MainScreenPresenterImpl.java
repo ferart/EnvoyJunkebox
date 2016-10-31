@@ -1,8 +1,6 @@
 package com.ferart.collaborativejunkebox.presenters.mainscreen;
 
-import android.app.Dialog;
-
-import com.ferart.collaborativejunkebox.domain.sesion.SessionInteractor;
+import com.ferart.collaborativejunkebox.domain.session.SessionInteractor;
 import com.ferart.collaborativejunkebox.scoop.routers.common.IRouter;
 import com.ferart.collaborativejunkebox.scoop.screens.SplashScreen;
 import com.lyft.scoop.ViewController;

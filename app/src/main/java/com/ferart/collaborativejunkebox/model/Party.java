@@ -1,5 +1,6 @@
 package com.ferart.collaborativejunkebox.model;
 
+import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
 
 import java.util.List;
@@ -11,11 +12,12 @@ import java.util.Map;
 @IgnoreExtraProperties
 public class Party {
 
-    private String userUID;
+
     private String name;
     private String hostToken;
-    private float latitude;
-    private float longitude;
+    private double latitude;
+    private double longitude;
+    private String userUID;
     private Map<String, List<String>> playlist; //each streaming service is an entry in the map, each entry has a playlist
 
     public Party() {
@@ -27,52 +29,55 @@ public class Party {
         this.hostToken = hostToken;
     }
 
-
-    private String getUserUID() {
+    @Exclude
+    public String getUserUID() {
         return userUID;
     }
 
-    private void setUserUID(String userUID) {
+    public void setUserUID(String userUID) {
         this.userUID = userUID;
     }
 
-    private String getName() {
+    public String getName() {
         return name;
     }
 
-    private void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    private String getHostToken() {
+    public String getHostToken() {
         return hostToken;
     }
 
-    private void setHostToken(String hostToken) {
+    public void setHostToken(String hostToken) {
         this.hostToken = hostToken;
     }
 
-    private float getLatitude() {
+    @Exclude
+    public double getLatitude() {
         return latitude;
     }
 
-    private void setLatitude(float latitude) {
+    public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
-    private float getLongitude() {
+    @Exclude
+    public double getLongitude() {
         return longitude;
     }
 
-    private void setLongitude(float longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
 
-    private Map<String, List<String>> getPlaylist() {
+    @Exclude
+    public Map<String, List<String>> getPlaylist() {
         return playlist;
     }
 
-    private void setPlaylist(Map<String, List<String>> playlist) {
+    public void setPlaylist(Map<String, List<String>> playlist) {
         this.playlist = playlist;
     }
 }

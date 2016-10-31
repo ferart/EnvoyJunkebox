@@ -1,5 +1,9 @@
 package com.ferart.collaborativejunkebox.data;
 
+import android.content.SharedPreferences;
+
+import com.ferart.collaborativejunkebox.data.fcm.database.JukeboxDBDAO;
+import com.ferart.collaborativejunkebox.data.fcm.database.JukeboxFirebaseDAOImpl;
 import com.google.firebase.database.DatabaseReference;
 
 import com.ferart.collaborativejunkebox.data.fcm.messaging.FCMMessageDAO;
@@ -48,8 +52,8 @@ public class DataModule {
 
     @Provides
     @Singleton
-    AccessPreferencesDAO providesAccessPreferences(){
-        return new AccessPreferencesDAOImpl();
+    AccessPreferencesDAO providesAccessPreferences(SharedPreferences sharedPreferences){
+        return new AccessPreferencesDAOImpl(sharedPreferences);
     }
 
     @Provides
@@ -58,7 +62,11 @@ public class DataModule {
         return new FCMMessageDAOImpl(okHttpClient,appServerURL,jsonMediaType);
     }
 
-
+    @Provides
+    @Singleton
+    JukeboxDBDAO providesJukeboxDBDAO(){
+        return new JukeboxFirebaseDAOImpl();
+    }
 
 
 

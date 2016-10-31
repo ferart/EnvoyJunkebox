@@ -2,6 +2,7 @@ package com.ferart.collaborativejunkebox.data.fcm.messaging;
 
 import android.util.Log;
 
+import com.ferart.collaborativejunkebox.ApplicationManager;
 import com.ferart.collaborativejunkebox.data.preferences.AccessPreferencesDAO;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
@@ -25,6 +26,12 @@ public class MessagingInstanceIDService extends FirebaseInstanceIdService {
 
 
     @Override
+    public void onCreate() {
+        super.onCreate();
+        ((ApplicationManager)getApplicationContext()).getPresentationComponent().inject(this);
+    }
+
+    @Override
     public void onTokenRefresh() {
         super.onTokenRefresh();
         // Get updated InstanceID token.
@@ -33,7 +40,5 @@ public class MessagingInstanceIDService extends FirebaseInstanceIdService {
 
         //saving token in preferences, for future use
        accessPreferences.putString(preferenceToken,refreshedToken);
-
-
     }
 }

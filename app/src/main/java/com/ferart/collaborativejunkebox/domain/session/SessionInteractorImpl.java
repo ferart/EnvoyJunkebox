@@ -1,8 +1,7 @@
-package com.ferart.collaborativejunkebox.domain.sesion;
+package com.ferart.collaborativejunkebox.domain.session;
 
 import android.support.annotation.NonNull;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.ferart.collaborativejunkebox.domain.common.BaseInteractor;
 import com.ferart.collaborativejunkebox.domain.thread.Executor;
@@ -57,7 +56,7 @@ public class SessionInteractorImpl extends BaseInteractor implements SessionInte
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d(TAG, "signInAnonymously:onComplete:" + task.isSuccessful());
-
+                        //task.getResult().getUser().getUid()
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInAnonymously", task.getException());
                             postOnMainThread(()-> mainScreenPresenter.authFailure());
