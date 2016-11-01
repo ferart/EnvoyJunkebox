@@ -11,6 +11,7 @@ import com.ferart.collaborativejunkebox.presenters.mainscreen.MainScreenPresente
 import com.ferart.collaborativejunkebox.presenters.splashscreen.SplashPresenter;
 import com.ferart.collaborativejunkebox.scoop.ApplicationModule;
 import com.ferart.collaborativejunkebox.scoop.containers.MainContainer;
+import com.ferart.collaborativejunkebox.scoop.controllers.parties.PartiesController;
 import com.ferart.collaborativejunkebox.scoop.controllers.splash.SplashController;
 import com.ferart.collaborativejunkebox.scoop.routers.RouterModule;
 
@@ -37,6 +38,7 @@ public interface PresentationComponent {
      *Presentation Layer
      */
     void inject(SplashController splashController);
+    void inject(PartiesController partiesController);
     void inject(SplashPresenter splashPresenter);
     void inject(MainScreenPresenter mainScreenPresenter);
 

@@ -6,6 +6,8 @@ import com.ferart.collaborativejunkebox.domain.session.SessionInteractor;
 import com.ferart.collaborativejunkebox.domain.splash.SplashInteractor;
 import com.ferart.collaborativejunkebox.presenters.mainscreen.MainScreenPresenterImpl;
 import com.ferart.collaborativejunkebox.presenters.mainscreen.MainScreenPresenter;
+import com.ferart.collaborativejunkebox.presenters.partiesscreen.PartiesPresenter;
+import com.ferart.collaborativejunkebox.presenters.partiesscreen.PartiesPresenterImpl;
 import com.ferart.collaborativejunkebox.presenters.splashscreen.SplashPresenter;
 import com.ferart.collaborativejunkebox.presenters.splashscreen.SplashPresenterImpl;
 import com.ferart.collaborativejunkebox.scoop.routers.common.IRouter;
@@ -30,7 +32,12 @@ public class PresentersModule {
 
     @Provides
     @Singleton
-    public SplashPresenter providesSplashPresenter(SplashInteractor splashInteractor, CreatePartyInteractor createPartyInteractor, PartyLocationTrackerInteractor partyLocationTrackerInteractor){
-        return new SplashPresenterImpl(splashInteractor, createPartyInteractor,partyLocationTrackerInteractor);
+    public SplashPresenter providesSplashPresenter(SplashInteractor splashInteractor){
+        return new SplashPresenterImpl(splashInteractor);
+    }
+
+    @Provides
+    public PartiesPresenter providesPartiesPresenter(CreatePartyInteractor createPartyInteractor, PartyLocationTrackerInteractor partyLocationTrackerInteractor){
+        return new PartiesPresenterImpl(createPartyInteractor,partyLocationTrackerInteractor);
     }
 }

@@ -2,6 +2,7 @@ package com.ferart.collaborativejunkebox.presenters.mainscreen;
 
 import com.ferart.collaborativejunkebox.domain.session.SessionInteractor;
 import com.ferart.collaborativejunkebox.scoop.routers.common.IRouter;
+import com.ferart.collaborativejunkebox.scoop.screens.ShowPartiesScreen;
 import com.ferart.collaborativejunkebox.scoop.screens.SplashScreen;
 import com.lyft.scoop.ViewController;
 
@@ -34,7 +35,8 @@ public class MainScreenPresenterImpl implements MainScreenPresenter {
     public void onResume() {
         //todo: check for google play services
         if (!mainRouter.hasActiveScreen()){
-            mainRouter.goTo(new SplashScreen());
+            mainRouter.goTo(new ShowPartiesScreen()); //todo: remove this line and show splash or first screen
+//            mainRouter.goTo(new SplashScreen());
         }
     }
 

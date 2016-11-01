@@ -3,6 +3,7 @@
     package="com.ferart.collaborativejunkebox">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:name=".ApplicationManager"
@@ -36,6 +37,9 @@
         </service>
 
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDY1FmT8291lhviGovbGn1mx321xwvFEd8"/>
 
     </application>
 
