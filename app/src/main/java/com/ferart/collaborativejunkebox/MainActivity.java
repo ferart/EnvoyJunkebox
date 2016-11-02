@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ((ApplicationManager)getApplicationContext()).getPresentationComponent().inject(this);
+        ((ApplicationManager)getApplicationContext()).setActivityContext(MainActivity.this);
         //adding first scoop as root, required by framework
         rootScoop = new Scoop.Builder("root").build();
         rootScoop.inflate(R.layout.root_main_containers, (ViewGroup) findViewById(R.id.main), true);

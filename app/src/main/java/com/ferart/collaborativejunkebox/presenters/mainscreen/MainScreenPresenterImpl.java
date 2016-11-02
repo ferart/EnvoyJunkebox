@@ -1,9 +1,11 @@
 package com.ferart.collaborativejunkebox.presenters.mainscreen;
 
 import com.ferart.collaborativejunkebox.domain.session.SessionInteractor;
+import com.ferart.collaborativejunkebox.presenters.common.BasePresenter;
 import com.ferart.collaborativejunkebox.scoop.routers.common.IRouter;
 import com.ferart.collaborativejunkebox.scoop.screens.ShowPartiesScreen;
 import com.ferart.collaborativejunkebox.scoop.screens.SplashScreen;
+import com.lyft.scoop.LayoutInflater;
 import com.lyft.scoop.ViewController;
 
 import javax.inject.Inject;
@@ -19,6 +21,7 @@ public class MainScreenPresenterImpl implements MainScreenPresenter {
     //mainRouter
     private IRouter mainRouter;
     private SessionInteractor sessionInteractor;
+    private BasePresenter presenterInUse;
 
 
     @Inject

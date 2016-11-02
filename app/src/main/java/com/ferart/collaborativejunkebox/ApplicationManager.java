@@ -1,6 +1,7 @@
 package com.ferart.collaborativejunkebox;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.ferart.collaborativejunkebox.diutils.ButterKnifeViewBinder;
 import com.ferart.collaborativejunkebox.scoop.ApplicationModule;
@@ -14,6 +15,8 @@ public class ApplicationManager extends Application {
 
     private PresentationComponent presentationComponent;
 
+    private Context activityContext;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -25,4 +28,11 @@ public class ApplicationManager extends Application {
         return presentationComponent;
     }
 
+    public Context getActivityContext() {
+        return activityContext;
+    }
+
+    public void setActivityContext(Context activityContext) {
+        this.activityContext = activityContext;
+    }
 }
