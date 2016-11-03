@@ -23,6 +23,7 @@ public class CreatePartyInteractor extends BaseInteractor {
 
     private String userUID, partyName, hostToken;
     private double latitude, longitude;
+    private SimpleCallback simpleCallback;
 
     private JukeboxDBDAO jukeboxDBDAO;
 
@@ -44,20 +45,31 @@ public class CreatePartyInteractor extends BaseInteractor {
         jukeboxDBDAO.writeNewParty(userUID, partyName, hostToken, new GeoLocation(latitude, longitude), new SimpleCallback() {
             @Override
             public void onSuccess() {
+                if (simpleCallback==null){
+                    return;
+                }
                 postOnMainThread(() -> {
                     Log.i(TAG, "party created");
+                    simpleCallback.onSuccess();
                 });
             }
 
             @Override
             public void onError() {
+                if (simpleCallback==null){
+                    return;
+                }
                 postOnMainThread(() -> {
                     Log.e(TAG, "party creation error");
+                    simpleCallback.onError();
                 });
             }
         });
     }
 
+    public void setSimpleCallback(SimpleCallback simpleCallback) {
+        this.simpleCallback = simpleCallback;
+    }
 
     public void setUserUID(String userUID) {
         this.userUID = userUID;

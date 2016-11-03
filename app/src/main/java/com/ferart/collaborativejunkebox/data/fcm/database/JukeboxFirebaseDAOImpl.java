@@ -49,6 +49,10 @@ public class JukeboxFirebaseDAOImpl implements JukeboxDBDAO {
         geoFire.setLocation(userUID, geoLocation, new GeoFire.CompletionListener() {
             @Override
             public void onComplete(String key, DatabaseError error) {
+                if (simpleCallback==null){
+                    return;
+                }
+
                 if (error!=null){
                    simpleCallback.onError();
                     return;
@@ -129,6 +133,7 @@ public class JukeboxFirebaseDAOImpl implements JukeboxDBDAO {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             Party party =dataSnapshot.getValue(Party.class);
+                            party.setUserUID(key);
                             partyLocationCallback.partyExitedLocation(party);
                         }
 
